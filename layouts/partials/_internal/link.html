@@ -1,0 +1,13 @@
+{{ if eq .type "link" }}
+  {{ $oct := "octicon/link.html" }}
+  {{ with .override }}
+    {{ $oct = printf "octicon/%s.html" . }}
+  {{ end }}
+  <a href="https://{{ .link }}">
+    {{ partial $oct . }} {{ .link }}
+  </a>
+{{ else if eq .type "email" }}
+<a href="mailto:{{ .link }}">
+  {{ partial "octicon/email.html" . }} {{ .link }}
+</a>
+{{ end }}

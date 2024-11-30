@@ -1,0 +1,19 @@
+name = 'Hugo Pure'
+license = 'MIT'
+licenselink = 'https://github.com/spslater/hugo-pure/LICENSE'
+description = 'Simple blog based on Pure.css'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/spslater/hugo-pure'
+
+# If you have a running demo of the theme
+# demosite = 'https://owner.github.io/repo'
+
+# Taxonomy terms
+tags = ['blog', 'minimal', 'Pure.css']
+features = ['blog', 'minimal', 'Pure.css']
+
+# If the theme has a single author
+[author]
+  name = 'Sean Slater'
+  homepage = 'https://github.com/spslater'

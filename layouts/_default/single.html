@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1 class="pure-u-1">{{ .Title }}</h1>
+
+  <div class="pure-u-1">
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format "2 Jan 2006" }}
+    {{ partial "octicon/calendar.html" . }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </div>
+
+  <div class="pure-u-1">
+    {{ .Content }}
+  </div>
+{{ end }}
