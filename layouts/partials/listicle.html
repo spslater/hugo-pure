@@ -5,7 +5,11 @@
     <article class="sp-bump sp-pinned">
       <header>
         <h4>
-          {{ partial "octicon/repo.html" .}}
+          {{ $octicon := "octicon/repo.html" }}
+          {{ with .Params.octicon }}
+            {{ $octicon = printf "octicon/%s.html" . }}
+          {{ end }}
+          {{ partial $octicon . }}
           <a href="{{ .Permalink }}">
             <span class="repo" title="{{ .Title }}">{{ .Title }}</span>
           </a>
