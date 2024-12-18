@@ -184,3 +184,17 @@ ul.term-list{
   text-align: center;
   font-size: 8rem;
 }
+
+aside {
+  float: right;
+  font-style: italic;
+  border-left: 0.1rem solid var(--accent);
+  box-shadow: inset 5px 0 5px -5px var(--accent);
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  color: var(--accent);
+}
+
+.right {
+    float: right;
+}
